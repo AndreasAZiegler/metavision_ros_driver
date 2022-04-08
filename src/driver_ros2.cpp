@@ -149,7 +149,7 @@ rcl_interfaces::msg::SetParametersResult DriverROS2::parameterChanged(
   return (res);
 }
 
-void DriverROS2::onParameterEvent(std::shared_ptr<const rcl_interfaces::msg::ParameterEvent> event)
+void DriverROS2::onParameterEvent(rcl_interfaces::msg::ParameterEvent::SharedPtr event)
 {
   if (event->node != this->get_fully_qualified_name()) {
     return;

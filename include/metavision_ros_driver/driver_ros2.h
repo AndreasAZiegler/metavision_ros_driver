@@ -41,7 +41,7 @@ private:
   bool stop();
   rcl_interfaces::msg::SetParametersResult parameterChanged(
     const std::vector<rclcpp::Parameter> & params);
-  void onParameterEvent(std::shared_ptr<const rcl_interfaces::msg::ParameterEvent> event);
+  void onParameterEvent(rcl_interfaces::msg::ParameterEvent::SharedPtr event);
   bool start();
   void addBiasParameter(
     const std::string & name, int min_val, int max_val, const std::string & desc);
