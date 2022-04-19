@@ -14,7 +14,7 @@ ADD essentials.list /etc/apt/sources.list.d/essentials.list
 RUN apt-get update && apt-get install -y metavision-essentials
 
 # Add ROS2 dependencies
-RUN apt-get install -y ros-foxy-ament-cmake-clang-format ros-foxy-image-common
+RUN apt-get install -y ros-foxy-ament-cmake-clang-format ros-foxy-image-common python3-wstool
 
 # Get dependencies for frankaemika 
 RUN apt-get update -y && apt-get install -y --allow-unauthenticated \
